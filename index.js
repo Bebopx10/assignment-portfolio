@@ -6,7 +6,7 @@ async function start() {
 
 start()
 
-function createBreedList() {
+function createBreedList(breedlist) {
 	document.getElementById("breed").innerHTML = `
 	<select onchange="loadByBreed(this.value)">
 		<option>Choose a dog breed</option>
@@ -17,6 +17,10 @@ function createBreedList() {
 	`
 }
 
-function loadByBreed(){
-
+async function loadByBreed(breed) {
+	if (breed != "Choose a dog breed") {
+		const response = await fetch(`https://dog.ceo/api/breed/${breed}/images`)
+		const data = await response.json()
+		console.log(data)
+	}
 }
