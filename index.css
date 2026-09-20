@@ -9,3 +9,16 @@ body{
   display: flex;
 flex-direction: column;
 }
+
+.header {
+  text-align: center;
+}
+
+.header h1{
+  margin: 0 0
+}
+
+.slideshow {
+  flex: 1;
+  background-color: black;
+}
