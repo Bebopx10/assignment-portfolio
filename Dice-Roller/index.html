@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dice Roller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="rollDice()">
+    <div class="container">
+        <header>
+            <h1>Web Dice Roller</h1>
+            <p class="instructions">
+                This application simulates rolling two standard six-sided dice for your game.
+                Click the <strong>Roll Dice</strong> button (or press <kbd>Enter</kbd>) to generate new random results.
+                The dice are rolled automatically when the page first loads.
+            </p>
+        </header>
+
+        <main>
+            <div class="dice-results">
+                <div class="field-group">
+                    <label for="die1">Die 1</label>
+                    <input type="text" id="die1" readonly class="result-field">
+                </div>
+                <div class="field-group">
+                    <label for="die2">Die 2</label>
+                    <input type="text" id="die2" readonly class="result-field">
+                </div>
+                <div class="field-group total-group">
+                    <label for="total">Total</label>
+                    <input type="text" id="total" readonly class="result-field">
+                </div>
+            </div>
+
+            <button id="rollBtn" autofocus onclick="rollDice()">Roll Dice</button>
+        </main>
+
+        <footer>
+            <p>Results are generated using true random numbers (1–6 for each die).</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
